@@ -1,9 +1,7 @@
-from sqlalchemy import Column, Integer, String, Float
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy import Integer, Column, Float, String
+from sqlalchemy.orm import Mapped
 
-
-class Base(DeclarativeBase):
-    pass
+from src.models.base import Base
 
 
 class Item(Base):
