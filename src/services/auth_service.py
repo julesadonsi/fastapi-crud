@@ -1,14 +1,21 @@
 import os
 from datetime import datetime, timedelta
+from functools import wraps
 from typing import Union, Any, Annotated
 import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jwt import InvalidTokenError
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.models.user import User
 
 reuseable_oauth = OAuth2PasswordBearer(tokenUrl="/login", scheme_name="JWT")
+
+from sqlalchemy.orm import Session
+from sqlalchemy.sql import Select
+from typing import Optional
 
 
 def create_access_token(subject: Union[str, Any], expires_delta: int = None) -> str:
@@ -62,7 +69,6 @@ def create_refresh_token(subject: Union[str, Any], expires_delta: int = None) ->
 
 
 async def verify_token(token: str):
-    print(token)
     try:
         payload = jwt.decode(
             token,
@@ -110,3 +116,12 @@ async def get_current_active_user(
     user: Annotated[User, Depends(get_current_user)],
 ):
     return user
+
+
+def protected(func):
+    @wraps(func)
+    async def wrapper(*arg, **kwargs):
+        user = get_current_active_user()
+        return await func(user, *arg, **kwargs)
+
+    return wrapper

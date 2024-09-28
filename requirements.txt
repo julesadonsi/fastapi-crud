@@ -6,6 +6,5 @@ SQLAlchemy==2.0.35
 sqlmodel~=0.0.22
 PyJWT~=2.9.0
 passlib~=1.6.5
-pydantic-settings~=2.5.2
-starlette~=0.38.6
 python-dotenv~=1.0.1
+APScheduler~=3.10.4

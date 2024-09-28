@@ -2,6 +2,7 @@ from typing import Any, Sequence, Type
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import Row, RowMapping, select
+from sqlalchemy.ext.asyncio import AsyncSession 
 from sqlalchemy.orm import Session
 
 from src.db import get_db
@@ -13,7 +14,7 @@ item_router = APIRouter()
 
 @item_router.get("/items")
 async def get_items(
-    skip: int = 0, limit: int = 50, db: Session = Depends(get_db)
+    skip: int = 0, limit: int = 50, db: AsyncSession = Depends(get_db)
 ) -> Sequence[ItemSchema]:
     stmt = select(Item).offset(skip).limit(limit)
     result = await db.execute(stmt)
@@ -21,7 +22,9 @@ async def get_items(
 
 
 @item_router.post("/items")
-async def create_item(data: ItemCreate, db: Session = Depends(get_db)) -> ItemSchema:
+async def create_item(
+    data: ItemCreate, db: AsyncSession = Depends(get_db)
+) -> ItemSchema:
     item = Item(**data.model_dump())
     db.add(item)
     await db.commit()
@@ -29,7 +32,9 @@ async def create_item(data: ItemCreate, db: Session = Depends(get_db)) -> ItemSc
 
 
 @item_router.put("/items/{item_id}")
-async def update_item(item_id: int, data: ItemUpdate, db: Session = Depends(get_db)):
+async def update_item(
+    item_id: int, data: ItemUpdate, db: AsyncSession = Depends(get_db)
+) -> ItemSchema:
     try:
         item = await db.get(Item, item_id)
         if item is None:
@@ -44,7 +49,9 @@ async def update_item(item_id: int, data: ItemUpdate, db: Session = Depends(get_
 
 
 @item_router.delete("/items/{item_id}")
-async def delete_item(item_id: int, db: Session = Depends(get_db)) -> dict[str, str]:
+async def delete_item(
+    item_id: int, db: AsyncSession = Depends(get_db)
+) -> dict[str, str]:
     item = db.get(Item, item_id)
     await db.delete(item)
     await db.commit()

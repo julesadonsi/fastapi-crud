@@ -40,6 +40,54 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "op",
         "importPath": "alembic",
         "description": "alembic",
@@ -73,7 +121,7 @@
         "documentation": {}
     },
     {
-        "label": "Integer",
+        "label": "select",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -81,7 +129,7 @@
         "documentation": {}
     },
     {
-        "label": "Column",
+        "label": "Row",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -89,7 +137,7 @@
         "documentation": {}
     },
     {
-        "label": "Float",
+        "label": "RowMapping",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -97,7 +145,15 @@
         "documentation": {}
     },
     {
-        "label": "String",
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "table",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -138,22 +194,6 @@
     },
     {
         "label": "Float",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "Row",
-        "importPath": "sqlalchemy",
-        "description": "sqlalchemy",
-        "isExtraImport": true,
-        "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "RowMapping",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -202,7 +242,39 @@
         "documentation": {}
     },
     {
-        "label": "AsyncEngine",
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
         "isExtraImport": true,
@@ -218,7 +290,7 @@
         "documentation": {}
     },
     {
-        "label": "SQLModel",
+        "label": "Field",
         "importPath": "sqlmodel",
         "description": "sqlmodel",
         "isExtraImport": true,
@@ -234,19 +306,11 @@
         "documentation": {}
     },
     {
-        "label": "create_engine",
+        "label": "SQLModel",
         "importPath": "sqlmodel",
         "description": "sqlmodel",
         "isExtraImport": true,
         "detail": "sqlmodel",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "src.models.base",
-        "description": "src.models.base",
-        "isExtraImport": true,
-        "detail": "src.models.base",
         "documentation": {}
     },
     {
@@ -274,11 +338,27 @@
         "documentation": {}
     },
     {
-        "label": "Item",
-        "importPath": "src.models.item",
-        "description": "src.models.item",
+        "label": "User",
+        "importPath": "src.models.user",
+        "description": "src.models.user",
         "isExtraImport": true,
-        "detail": "src.models.item",
+        "detail": "src.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "src.models.user",
+        "description": "src.models.user",
+        "isExtraImport": true,
+        "detail": "src.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "src.models.user",
+        "description": "src.models.user",
+        "isExtraImport": true,
+        "detail": "src.models.user",
         "documentation": {}
     },
     {
@@ -290,7 +370,135 @@
         "documentation": {}
     },
     {
-        "label": "DeclarativeBase",
+        "label": "Item",
+        "importPath": "src.models.item",
+        "description": "src.models.item",
+        "isExtraImport": true,
+        "detail": "src.models.item",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "custom_app_context",
+        "importPath": "passlib.apps",
+        "description": "passlib.apps",
+        "isExtraImport": true,
+        "detail": "passlib.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -298,7 +506,23 @@
         "documentation": {}
     },
     {
-        "label": "Mapped",
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeBase",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -338,35 +562,19 @@
         "documentation": {}
     },
     {
-        "label": "APIRouter",
-        "importPath": "fastapi",
-        "description": "fastapi",
+        "label": "or_",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
         "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "sqlalchemy.sql",
         "documentation": {}
     },
     {
-        "label": "Depends",
-        "importPath": "fastapi",
-        "description": "fastapi",
+        "label": "Select",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
         "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "HTTPException",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "FastAPI",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
+        "detail": "sqlalchemy.sql",
         "documentation": {}
     },
     {
@@ -378,11 +586,99 @@
         "documentation": {}
     },
     {
-        "label": "init_db",
+        "label": "get_db",
         "importPath": "src.db",
         "description": "src.db",
         "isExtraImport": true,
         "detail": "src.db",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "src.db",
+        "description": "src.db",
+        "isExtraImport": true,
+        "detail": "src.db",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSchema",
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "isExtraImport": true,
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "UserSchema",
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "isExtraImport": true,
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "AuthData",
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "isExtraImport": true,
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "LoginData",
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "isExtraImport": true,
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "UserUpdateSchema",
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "isExtraImport": true,
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "UserSchema",
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "isExtraImport": true,
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "isExtraImport": true,
+        "detail": "src.services.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "create_refresh_token",
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "isExtraImport": true,
+        "detail": "src.services.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_active_user",
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "isExtraImport": true,
+        "detail": "src.services.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_active_user",
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "isExtraImport": true,
+        "detail": "src.services.auth_service",
         "documentation": {}
     },
     {
@@ -426,27 +722,27 @@
         "documentation": {}
     },
     {
-        "label": "AsyncSession",
-        "importPath": "sqlmodel.ext.asyncio.session",
-        "description": "sqlmodel.ext.asyncio.session",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "sqlmodel.ext.asyncio.session",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
-        "label": "item_router",
-        "importPath": "src.routers.item",
-        "description": "src.routers.item",
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "src.routers.item",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "__future__",
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -459,21 +755,116 @@
         "documentation": {}
     },
     {
-        "label": "site",
-        "kind": 6,
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
         "isExtraImport": true,
-        "importPath": "site",
-        "description": "site",
-        "detail": "site",
+        "detail": "datetime",
         "documentation": {}
     },
     {
-        "label": "sys",
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidTokenError",
+        "importPath": "jwt",
+        "description": "jwt",
+        "isExtraImport": true,
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2PasswordBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlmodel.ext.asyncio.session",
+        "description": "sqlmodel.ext.asyncio.session",
+        "isExtraImport": true,
+        "detail": "sqlmodel.ext.asyncio.session",
+        "documentation": {}
+    },
+    {
+        "label": "BackgroundScheduler",
+        "importPath": "apscheduler.schedulers.background",
+        "description": "apscheduler.schedulers.background",
+        "isExtraImport": true,
+        "detail": "apscheduler.schedulers.background",
+        "documentation": {}
+    },
+    {
+        "label": "CronTrigger",
+        "importPath": "apscheduler.triggers.cron",
+        "description": "apscheduler.triggers.cron",
+        "isExtraImport": true,
+        "detail": "apscheduler.triggers.cron",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "item_router",
+        "importPath": "src.controllers.item_controller",
+        "description": "src.controllers.item_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.item_controller",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "auth_router",
+        "importPath": "src.controllers.auth_controller",
+        "description": "src.controllers.auth_controller",
+        "isExtraImport": true,
+        "detail": "src.controllers.auth_controller",
         "documentation": {}
     },
     {
@@ -540,6 +931,33 @@
         "documentation": {}
     },
     {
+        "label": "auth_router",
+        "kind": 5,
+        "importPath": "src.controllers.auth_controller",
+        "description": "src.controllers.auth_controller",
+        "peekOfCode": "auth_router = APIRouter(\n    tags=[\"authentication\"],\n    responses={404: {\"description\": \"Not found\"}},\n)\n@auth_router.post(\"/signup\", response_model=AuthData)\nasync def signup(\n    data: UserCreateSchema, db: AsyncSession = Depends(get_db)\n) -> AuthData:\n    \"\"\"\n    Create a new user and return authentication token",
+        "detail": "src.controllers.auth_controller",
+        "documentation": {}
+    },
+    {
+        "label": "item_router",
+        "kind": 5,
+        "importPath": "src.controllers.item_controller",
+        "description": "src.controllers.item_controller",
+        "peekOfCode": "item_router = APIRouter()\n@item_router.get(\"/items\")\nasync def get_items(\n    skip: int = 0, limit: int = 50, db: AsyncSession = Depends(get_db)\n) -> Sequence[ItemSchema]:\n    stmt = select(Item).offset(skip).limit(limit)\n    result = await db.execute(stmt)\n    return result.scalars().all()\n@item_router.post(\"/items\")\nasync def create_item(",
+        "detail": "src.controllers.item_controller",
+        "documentation": {}
+    },
+    {
+        "label": "user_router",
+        "kind": 5,
+        "importPath": "src.controllers.user_controller",
+        "description": "src.controllers.user_controller",
+        "peekOfCode": "user_router = APIRouter(prefix=\"/api/users\", tags=[\"Users\"])\n@user_router.put(\"/{user_id}\")\nasync def update_user(\n    data: UserUpdateSchema,\n    user_id: int,\n    db: AsyncSession = Depends(get_db),\n    user: AsyncSession = Depends(get_current_active_user),\n) -> UserSchema:\n    try:\n        user = await db.get(User, user_id)",
+        "detail": "src.controllers.user_controller",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "kind": 6,
         "importPath": "src.models.base",
@@ -553,7 +971,7 @@
         "kind": 6,
         "importPath": "src.models.item",
         "description": "src.models.item",
-        "peekOfCode": "class Item(Base):\n    __tablename__ = \"items\"\n    id: Mapped[int] = Column(Integer, primary_key=True)\n    name: Mapped[str] = Column(String)\n    price: Mapped[float] = Column(Float)\n    quantity: Mapped[int] = Column(Integer)",
+        "peekOfCode": "class Item(SQLModel):\n    id: Optional[int] = Field(default=None, primary_key=True)\n    name: str = Field(index=True)\n    price: str\n    quantity: int",
         "detail": "src.models.item",
         "documentation": {}
     },
@@ -573,15 +991,6 @@
         "description": "src.models.user",
         "peekOfCode": "class Token(Base):\n    __tablename__ = \"tokens\"\n    id: Mapped[int] = Column(Integer, primary_key=True, index=True)\n    token: Mapped[str] = Column(String, index=True)\n    user_id: Mapped[int] = Column(Integer, ForeignKey(\"users.id\"))",
         "detail": "src.models.user",
-        "documentation": {}
-    },
-    {
-        "label": "item_router",
-        "kind": 5,
-        "importPath": "src.routers.item",
-        "description": "src.routers.item",
-        "peekOfCode": "item_router = APIRouter()\n@item_router.get(\"/items\")\nasync def get_items(\n    skip: int = 0, limit: int = 50, db: Session = Depends(get_db)\n) -> Sequence[ItemSchema]:\n    stmt = select(Item).offset(skip).limit(limit)\n    result = await db.execute(stmt)\n    return result.scalars().all()\n@item_router.post(\"/items\")\nasync def create_item(data: ItemCreate, db: Session = Depends(get_db)) -> ItemSchema:",
-        "detail": "src.routers.item",
         "documentation": {}
     },
     {
@@ -612,30 +1021,84 @@
         "documentation": {}
     },
     {
-        "label": "SECRET_KEY",
-        "kind": 5,
-        "importPath": "src.config",
-        "description": "src.config",
-        "peekOfCode": "SECRET_KEY = \"09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7\"\nALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 30",
-        "detail": "src.config",
+        "label": "UserSchema",
+        "kind": 6,
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "peekOfCode": "class UserSchema(BaseModel):\n    id: int\n    username: str = Field(min_length=3)\n    email: EmailStr\n    role: str\nclass UserCreateSchema(BaseModel):\n    username: str = Field(min_length=3)\n    email: EmailStr\n    password: str = Field(min_length=6)\n    role: str",
+        "detail": "src.schemas.user_shema",
         "documentation": {}
     },
     {
-        "label": "ALGORITHM",
-        "kind": 5,
-        "importPath": "src.config",
-        "description": "src.config",
-        "peekOfCode": "ALGORITHM = \"HS256\"\nACCESS_TOKEN_EXPIRE_MINUTES = 30",
-        "detail": "src.config",
+        "label": "UserCreateSchema",
+        "kind": 6,
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "peekOfCode": "class UserCreateSchema(BaseModel):\n    username: str = Field(min_length=3)\n    email: EmailStr\n    password: str = Field(min_length=6)\n    role: str\nclass UserUpdateSchema(BaseModel):\n    username: Optional[str]\n    email: Optional[EmailStr]\n    role: Optional[str]\nclass AuthData(BaseModel):",
+        "detail": "src.schemas.user_shema",
         "documentation": {}
     },
     {
-        "label": "ACCESS_TOKEN_EXPIRE_MINUTES",
+        "label": "UserUpdateSchema",
+        "kind": 6,
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "peekOfCode": "class UserUpdateSchema(BaseModel):\n    username: Optional[str]\n    email: Optional[EmailStr]\n    role: Optional[str]\nclass AuthData(BaseModel):\n    user: UserSchema\n    access_token: str\n    refresh_token: str\nclass LoginData(BaseModel):\n    email: EmailStr",
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "AuthData",
+        "kind": 6,
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "peekOfCode": "class AuthData(BaseModel):\n    user: UserSchema\n    access_token: str\n    refresh_token: str\nclass LoginData(BaseModel):\n    email: EmailStr\n    password: str",
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "LoginData",
+        "kind": 6,
+        "importPath": "src.schemas.user_shema",
+        "description": "src.schemas.user_shema",
+        "peekOfCode": "class LoginData(BaseModel):\n    email: EmailStr\n    password: str",
+        "detail": "src.schemas.user_shema",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "peekOfCode": "def create_access_token(subject: Union[str, Any], expires_delta: int = None) -> str:\n    \"\"\"\n    Create a JWT token\n    Args:\n        subject (dict): data to be encoded\n        expires_delta (timedelta | None, optional): expiration time. Defaults to None.\n    Returns:\n        str: JWT token\n    \"\"\"\n    if expires_delta:",
+        "detail": "src.services.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "create_refresh_token",
+        "kind": 2,
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "peekOfCode": "def create_refresh_token(subject: Union[str, Any], expires_delta: int = None) -> str:\n    \"\"\"\n    Create a refresh token\n    Args:\n        subject (dict): data to be encoded\n        expires_delta (timedelta | None, optional): expiration time. Defaults to None.\n    Returns:\n        str: JWT token\n    \"\"\"\n    to_encode = subject",
+        "detail": "src.services.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "protected",
+        "kind": 2,
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "peekOfCode": "def protected(func):\n    @wraps(func)\n    async def wrapper(*arg, **kwargs):\n        user = get_current_active_user()\n        return await func(user, *arg, **kwargs)\n    return wrapper",
+        "detail": "src.services.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "reuseable_oauth",
         "kind": 5,
-        "importPath": "src.config",
-        "description": "src.config",
-        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = 30",
-        "detail": "src.config",
+        "importPath": "src.services.auth_service",
+        "description": "src.services.auth_service",
+        "peekOfCode": "reuseable_oauth = OAuth2PasswordBearer(tokenUrl=\"/login\", scheme_name=\"JWT\")\nfrom sqlalchemy.orm import Session\nfrom sqlalchemy.sql import Select\nfrom typing import Optional\ndef create_access_token(subject: Union[str, Any], expires_delta: int = None) -> str:\n    \"\"\"\n    Create a JWT token\n    Args:\n        subject (dict): data to be encoded\n        expires_delta (timedelta | None, optional): expiration time. Defaults to None.",
+        "detail": "src.services.auth_service",
         "documentation": {}
     },
     {
@@ -643,17 +1106,44 @@
         "kind": 5,
         "importPath": "src.db",
         "description": "src.db",
-        "peekOfCode": "DATABASE_URL = \"postgresql+asyncpg://postgres:root@localhost:5432/fastapi\"\nengine = AsyncEngine(create_engine(DATABASE_URL, echo=True, future=True))\nasync def init_db():\n    async with engine.begin() as conn:\n        # await conn.run_sync(SQLModel.metadata.drop_all)\n        await conn.run_sync(SQLModel.metadata.create_all)\nasync def get_db() -> AsyncSession:\n    async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)\n    async with async_session() as session:\n        yield session",
+        "peekOfCode": "DATABASE_URL = \"postgresql+asyncpg://postgres:root@localhost:5432/fastapi\"\nasync_engine = create_async_engine(DATABASE_URL, echo=True, future=True)\nasync def get_db() -> AsyncSession:\n    async_session = sessionmaker(\n        bind=async_engine, class_=AsyncSession, expire_on_commit=False\n    )\n    async with async_session() as session:\n        yield session",
         "detail": "src.db",
         "documentation": {}
     },
     {
-        "label": "engine",
+        "label": "async_engine",
         "kind": 5,
         "importPath": "src.db",
         "description": "src.db",
-        "peekOfCode": "engine = AsyncEngine(create_engine(DATABASE_URL, echo=True, future=True))\nasync def init_db():\n    async with engine.begin() as conn:\n        # await conn.run_sync(SQLModel.metadata.drop_all)\n        await conn.run_sync(SQLModel.metadata.create_all)\nasync def get_db() -> AsyncSession:\n    async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)\n    async with async_session() as session:\n        yield session",
+        "peekOfCode": "async_engine = create_async_engine(DATABASE_URL, echo=True, future=True)\nasync def get_db() -> AsyncSession:\n    async_session = sessionmaker(\n        bind=async_engine, class_=AsyncSession, expire_on_commit=False\n    )\n    async with async_session() as session:\n        yield session",
         "detail": "src.db",
+        "documentation": {}
+    },
+    {
+        "label": "my_daily_task",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def my_daily_task():\n    print(f\"Task is running at {datetime.now()}\")\n# Set up the scheduler\nscheduler = BackgroundScheduler()\ntrigger = CronTrigger(minute=\"*\")\nscheduler.add_job(my_daily_task, trigger)\nscheduler.start()\nload_dotenv()\n@asynccontextmanager\nasync def lifespan(application: FastAPI):",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "scheduler",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "scheduler = BackgroundScheduler()\ntrigger = CronTrigger(minute=\"*\")\nscheduler.add_job(my_daily_task, trigger)\nscheduler.start()\nload_dotenv()\n@asynccontextmanager\nasync def lifespan(application: FastAPI):\n    yield\n    scheduler.shutdown()\napp = FastAPI(lifespan=lifespan)",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "trigger",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "trigger = CronTrigger(minute=\"*\")\nscheduler.add_job(my_daily_task, trigger)\nscheduler.start()\nload_dotenv()\n@asynccontextmanager\nasync def lifespan(application: FastAPI):\n    yield\n    scheduler.shutdown()\napp = FastAPI(lifespan=lifespan)\napp.include_router(prefix=\"/api/items\",router=item_router)",
+        "detail": "src.main",
         "documentation": {}
     },
     {
@@ -661,89 +1151,8 @@
         "kind": 5,
         "importPath": "src.main",
         "description": "src.main",
-        "peekOfCode": "app = FastAPI()\n@app.on_event(\"startup\")\nasync def on_startup():\n    await init_db()\napp.include_router(item_router)",
+        "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.include_router(prefix=\"/api/items\",router=item_router)\napp.include_router(prefix=\"/api/users\",router=auth_router)",
         "detail": "src.main",
-        "documentation": {}
-    },
-    {
-        "label": "bin_dir",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "base",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"PATH\"]",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"VIRTUAL_ENV\"]",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "prev_length",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.10/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "sys.path[:]",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "sys.real_prefix",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
-        "detail": "venv.bin.activate_this",
-        "documentation": {}
-    },
-    {
-        "label": "sys.prefix",
-        "kind": 5,
-        "importPath": "venv.bin.activate_this",
-        "description": "venv.bin.activate_this",
-        "peekOfCode": "sys.prefix = base",
-        "detail": "venv.bin.activate_this",
         "documentation": {}
     }
 ]

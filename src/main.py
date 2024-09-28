@@ -1,28 +1,34 @@
+from datetime import datetime
+
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.cron import CronTrigger
 from dotenv import load_dotenv
 from fastapi import FastAPI
-from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
 
-from src.db import init_db
-from src.controllers.auth_controller import auth_router
 from src.controllers.item_controller import item_router
+from contextlib import asynccontextmanager
+from src.controllers.auth_controller import auth_router
 
-app = FastAPI()
+
+def my_daily_task():
+    print(f"Task is running at {datetime.now()}")
+
+
+# Set up the scheduler
+scheduler = BackgroundScheduler()
+trigger = CronTrigger(minute="*")
+scheduler.add_job(my_daily_task, trigger)
+scheduler.start()
 
 load_dotenv()
 
 
-@app.on_event("startup")
-async def on_startup():
-    await init_db()
+@asynccontextmanager
+async def lifespan(application: FastAPI):
+    yield
+    scheduler.shutdown()
 
 
-@app.exception_handler(RequestValidationError)
-async def validation_exception_handler(request, exc: RequestValidationError):
-    return JSONResponse(
-        status_code=422, content={"detail": exc.errors(), "body": exc.body}
-    )
-
-
-app.include_router(item_router)
-app.include_router(auth_router)
+app = FastAPI(lifespan=lifespan)
+app.include_router(prefix="/api/items",router=item_router)
+app.include_router(prefix="/api/users",router=auth_router)

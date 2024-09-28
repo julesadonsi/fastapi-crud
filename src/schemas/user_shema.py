@@ -20,7 +20,6 @@ class UserCreateSchema(BaseModel):
 class UserUpdateSchema(BaseModel):
     username: Optional[str]
     email: Optional[EmailStr]
-    password: Optional[str]
     role: Optional[str]
 
 

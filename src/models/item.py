@@ -1,12 +1,11 @@
-from sqlalchemy import Integer, Column, Float, String
-from sqlalchemy.orm import Mapped
+from sqlalchemy import table
+from sqlmodel import Field, SQLModel
+from typing import Optional
 
-from src.models.base import Base
 
+class Item(SQLModel):
 
-class Item(Base):
-    __tablename__ = "items"
-    id: Mapped[int] = Column(Integer, primary_key=True)
-    name: Mapped[str] = Column(String)
-    price: Mapped[float] = Column(Float)
-    quantity: Mapped[int] = Column(Integer)
+    id: Optional[int] = Field(default=None, primary_key=True)
+    name: str = Field(index=True)
+    price: str
+    quantity: int
