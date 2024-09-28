@@ -58,11 +58,11 @@ async def signup(
 
 
 @auth_router.post("/login", response_model=AuthData)
-async def login(data: LoginData, db: Session = Depends(get_db)) -> AuthData:
+async def login(data: LoginData, db: AsyncSession = Depends(get_db)) -> AuthData:
     """
     Authenticate a user and return authentication token
     """
-    user = await db.query(User).filter(User.email == data.email).first()
+    user = (await db.scalars(select(User).where(User.email == data.email))).first()
     if user is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -78,6 +78,7 @@ async def login(data: LoginData, db: Session = Depends(get_db)) -> AuthData:
     user_model = UserSchema(
         id=user.id, email=user.email, username=user.username, role=user.role
     )
+
     return AuthData(
         user=user_model,
         access_token=create_access_token(user_model.model_dump()),
