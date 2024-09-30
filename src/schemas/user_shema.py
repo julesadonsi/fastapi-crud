@@ -1,24 +1,32 @@
-from typing import Optional
-
-from pydantic import BaseModel, EmailStr, Field
+from typing import (
+    Optional,
+)
+from pydantic import (
+    BaseModel,
+    EmailStr,
+    Field,
+)
+from src.models.user_model import (
+    Role,
+)
 
 
 class UserSchema(BaseModel):
     id: int
-    username: str = Field(min_length=3)
-    email: EmailStr
-    role: str
+    phone: str = Field(min_length=3)
+    email: EmailStr = Field(min_length=3)
+    role: Role
 
 
 class UserCreateSchema(BaseModel):
-    username: str = Field(min_length=3)
-    email: EmailStr
+    phone: str = Field(min_length=3)
+    email: EmailStr = Field(min_length=3)
     password: str = Field(min_length=6)
-    role: str
+    role: Role
 
 
 class UserUpdateSchema(BaseModel):
-    username: Optional[str]
+    phone: Optional[str]
     email: Optional[EmailStr]
     role: Optional[str]
 
@@ -30,5 +38,5 @@ class AuthData(BaseModel):
 
 
 class LoginData(BaseModel):
-    email: EmailStr
+    phone: str
     password: str

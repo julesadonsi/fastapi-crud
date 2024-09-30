@@ -602,6 +602,14 @@
         "documentation": {}
     },
     {
+        "label": "get_db",
+        "importPath": "src.db",
+        "description": "src.db",
+        "isExtraImport": true,
+        "detail": "src.db",
+        "documentation": {}
+    },
+    {
         "label": "UserCreateSchema",
         "importPath": "src.schemas.user_shema",
         "description": "src.schemas.user_shema",
@@ -1043,7 +1051,7 @@
         "kind": 6,
         "importPath": "src.schemas.user_shema",
         "description": "src.schemas.user_shema",
-        "peekOfCode": "class UserUpdateSchema(BaseModel):\n    username: Optional[str]\n    email: Optional[EmailStr]\n    role: Optional[str]\nclass AuthData(BaseModel):\n    user: UserSchema\n    access_token: str\n    refresh_token: str\nclass LoginData(BaseModel):\n    email: EmailStr",
+        "peekOfCode": "class UserUpdateSchema(BaseModel):\n    username: Optional[str]\n    email: Optional[EmailStr]\n    role: Optional[str]\nclass AuthData(BaseModel):\n    user: UserSchema\n    access_token: str\n    refresh_token: str\nclass LoginData(BaseModel):\n    email: Optional[EmailStr] = None",
         "detail": "src.schemas.user_shema",
         "documentation": {}
     },
@@ -1052,7 +1060,7 @@
         "kind": 6,
         "importPath": "src.schemas.user_shema",
         "description": "src.schemas.user_shema",
-        "peekOfCode": "class AuthData(BaseModel):\n    user: UserSchema\n    access_token: str\n    refresh_token: str\nclass LoginData(BaseModel):\n    email: EmailStr\n    password: str",
+        "peekOfCode": "class AuthData(BaseModel):\n    user: UserSchema\n    access_token: str\n    refresh_token: str\nclass LoginData(BaseModel):\n    email: Optional[EmailStr] = None\n    password: str\n    username:Optional[str] = None",
         "detail": "src.schemas.user_shema",
         "documentation": {}
     },
@@ -1061,7 +1069,7 @@
         "kind": 6,
         "importPath": "src.schemas.user_shema",
         "description": "src.schemas.user_shema",
-        "peekOfCode": "class LoginData(BaseModel):\n    email: EmailStr\n    password: str",
+        "peekOfCode": "class LoginData(BaseModel):\n    email: Optional[EmailStr] = None\n    password: str\n    username:Optional[str] = None",
         "detail": "src.schemas.user_shema",
         "documentation": {}
     },
@@ -1079,16 +1087,7 @@
         "kind": 2,
         "importPath": "src.services.auth_service",
         "description": "src.services.auth_service",
-        "peekOfCode": "def create_refresh_token(subject: Union[str, Any], expires_delta: int = None) -> str:\n    \"\"\"\n    Create a refresh token\n    Args:\n        subject (dict): data to be encoded\n        expires_delta (timedelta | None, optional): expiration time. Defaults to None.\n    Returns:\n        str: JWT token\n    \"\"\"\n    to_encode = subject",
-        "detail": "src.services.auth_service",
-        "documentation": {}
-    },
-    {
-        "label": "protected",
-        "kind": 2,
-        "importPath": "src.services.auth_service",
-        "description": "src.services.auth_service",
-        "peekOfCode": "def protected(func):\n    @wraps(func)\n    async def wrapper(*arg, **kwargs):\n        user = get_current_active_user()\n        return await func(user, *arg, **kwargs)\n    return wrapper",
+        "peekOfCode": "def create_refresh_token(subject: Union[str, Any], expires_delta: int = None) -> str:\n    \"\"\"\n    Create a refresh token\n    Args:\n        subject (dict): data to be encoded\n        expires_delta (timedelta | None, optional): expiration time. Defaults to None.\n    Returns:\n        str: JWT token\n    \"\"\"\n    if expires_delta:",
         "detail": "src.services.auth_service",
         "documentation": {}
     },
