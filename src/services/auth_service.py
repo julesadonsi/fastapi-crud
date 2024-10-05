@@ -3,14 +3,12 @@ from datetime import (
     datetime,
     timedelta,
 )
-from functools import (
-    wraps,
-)
 from typing import (
     Union,
     Any,
     Annotated,
 )
+
 import jwt
 from fastapi import (
     Depends,
@@ -22,12 +20,6 @@ from fastapi.security import (
 )
 from jwt import (
     InvalidTokenError,
-)
-from sqlalchemy import (
-    select,
-)
-from sqlalchemy.ext.asyncio import (
-    AsyncSession,
 )
 
 from src.db import (
@@ -140,11 +132,8 @@ async def verify_token(
         )
 
 
-async def get_current_user(
-    token: Annotated[
-        str,
-        Depends(reuseable_oauth),
-    ],
+async def authenticated(
+    token: Annotated[str, Depends(reuseable_oauth)],
     db: Session = Depends(get_db),
 ):
     credentials_exception = HTTPException(
@@ -164,12 +153,3 @@ async def get_current_user(
     except InvalidTokenError:
         raise credentials_exception
     return db.query(User).filter_by(id=user_id).first()
-
-
-async def get_current_active_user(
-    user: Annotated[
-        User,
-        Depends(get_current_user),
-    ],
-):
-    return user
