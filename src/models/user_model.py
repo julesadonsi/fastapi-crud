@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import List
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Float, Enum as SQLAEnum
+from sqlalchemy import Column, Integer, String, ForeignKey, Float
 from sqlalchemy.orm import Mapped, relationship
 
 from src.models.base_model import Base
@@ -20,8 +20,7 @@ class User(Base):
     phone: Mapped[str] = Column(String, unique=True, index=True)
     email: Mapped[str] = Column(String, unique=True, index=True, nullable=True)
     password: Mapped[str] = Column(String)
-    role: str = Column(SQLAEnum(Role), default=Role.USER)
-    items: Mapped[List["Item"]] = relationship(back_populates="user")
+    items: Mapped[List["Item"]] = relationship("Item", back_populates="user")
 
 
 class Item(Base):
@@ -33,5 +32,5 @@ class Item(Base):
     quantity: Mapped[int] = Column(Integer)
     user_id: Mapped[int] = Column(Integer, ForeignKey("users.id"), nullable=False)
     user: Mapped["User"] = relationship(
-        User, back_populates="items", foreign_keys=[user_id]
+        "User", back_populates="items", foreign_keys=[user_id]
     )

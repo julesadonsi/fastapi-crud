@@ -1,10 +1,17 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from passlib.apps import custom_app_context as pwd_context
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 
 from src.db import get_db
 from src.models.user_model import User
-from src.schemas.user_shema import UserCreateSchema, UserSchema, AuthData, LoginData
+from src.schemas.user_shema import (
+    AuthenticatedUser,
+    UserCreateSchema,
+    UserSchema,
+    AuthData,
+    LoginData,
+)
 from src.services.auth_service import (
     create_access_token,
     create_refresh_token,
@@ -18,11 +25,12 @@ auth_router = APIRouter(
 
 
 @auth_router.post("/signup", response_model=AuthData)
-async def signup(data: UserCreateSchema, db: Session = Depends(get_db)) -> AuthData:
+async def signup(data: UserCreateSchema, db: AsyncSession = Depends(get_db)) -> AuthData:
     """
     Create a new user and return authentication token
     """
-    existing_user = db.query(User).filter_by(phone=data.phone).first()
+
+    existing_user = await db.get(User.phone, data.phone)
     if existing_user is not None:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT, detail="User already exists"
@@ -33,12 +41,10 @@ async def signup(data: UserCreateSchema, db: Session = Depends(get_db)) -> AuthD
     user.password = hashed_password
 
     db.add(user)
-    db.commit()
-    db.refresh(user)
+    await db.commit()
+    await db.refresh(user)
 
-    user_model = UserSchema(
-        id=user.id, email=user.email, phone=user.phone, role=user.role
-    )
+    user_model = UserSchema(id=user.id, email=user.email, phone=user.phone)
     return AuthData(
         user=user_model,
         access_token=create_access_token(user.id),
@@ -47,11 +53,11 @@ async def signup(data: UserCreateSchema, db: Session = Depends(get_db)) -> AuthD
 
 
 @auth_router.post("/login", response_model=AuthData)
-async def login(data: LoginData, db: Session = Depends(get_db)) -> AuthData:
+async def login(data: LoginData, db: AsyncSession = Depends(get_db)) -> AuthData:
     """
     Authenticate a user and return authentication token
     """
-    user = db.query(User).filter_by(phone=data.phone).first()
+    user = await db.get(User.phone, data.phone)
     if user is None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -63,10 +69,7 @@ async def login(data: LoginData, db: Session = Depends(get_db)) -> AuthData:
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect email or password",
         )
-
-    user_model = UserSchema(
-        id=user.id, email=user.email, phone=user.phone, role=user.role
-    )
+    user_model = UserSchema(id=user.id, email=user.email, phone=user.phone)
 
     return AuthData(
         user=user_model,
@@ -77,4 +80,4 @@ async def login(data: LoginData, db: Session = Depends(get_db)) -> AuthData:
 
 @auth_router.get("/me")
 async def me(user: Session = Depends(authenticated)):
-    return vars(user)
+    return AuthenticatedUser(**vars(user))

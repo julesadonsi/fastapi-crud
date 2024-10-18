@@ -1,42 +1,22 @@
 import os
-from datetime import (
-    datetime,
-    timedelta,
-)
-from typing import (
-    Union,
-    Any,
-    Annotated,
-)
+from datetime import datetime, timedelta
+from typing import Annotated, Any, Union
 
 import jwt
-from fastapi import (
-    Depends,
-    HTTPException,
-    status,
-)
-from fastapi.security import (
-    OAuth2PasswordBearer,
-)
-from jwt import (
-    InvalidTokenError,
-)
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+from jwt import InvalidTokenError
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
 
-from src.db import (
-    get_db,
-)
-from src.models.user_model import (
-    User,
-)
+from src.db import get_db
+from src.models.user_model import User
 
 reuseable_oauth = OAuth2PasswordBearer(
     tokenUrl="/login",
     scheme_name="JWT",
 )
-
-from sqlalchemy.orm import (
-    Session,
-)
+from sqlalchemy.orm import Session
 
 
 def create_access_token(
@@ -134,7 +114,7 @@ async def verify_token(
 
 async def authenticated(
     token: Annotated[str, Depends(reuseable_oauth)],
-    db: Session = Depends(get_db),
+    db: AsyncSession = Depends(get_db),
 ):
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
@@ -152,4 +132,4 @@ async def authenticated(
             raise credentials_exception
     except InvalidTokenError:
         raise credentials_exception
-    return db.query(User).filter_by(id=user_id).first()
+    return await db.get(User, user_id)

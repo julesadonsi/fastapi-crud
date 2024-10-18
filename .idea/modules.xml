@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/total-immobilier.iml" filepath="$PROJECT_DIR$/.idea/total-immobilier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/totalimmo-backend.iml" filepath="$PROJECT_DIR$/.idea/totalimmo-backend.iml" />
     </modules>
   </component>
 </project>

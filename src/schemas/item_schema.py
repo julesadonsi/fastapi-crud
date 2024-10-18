@@ -1,5 +1,4 @@
 from pydantic import BaseModel, PositiveFloat
-from sqlalchemy import create_engine
 
 from src.schemas.user_shema import UserSchema
 
@@ -8,6 +7,7 @@ class ItemSchema(BaseModel):
     id: int
     name: str
     price: PositiveFloat
+    quantity: PositiveFloat
     user: UserSchema
 
     class Config:
@@ -19,8 +19,14 @@ class ItemCreate(BaseModel):
     price: PositiveFloat
     quantity: PositiveFloat
 
+    class Config:
+        from_attributes = True
+
 
 class ItemUpdate(BaseModel):
     name: str | None = None
     price: PositiveFloat | None = None
     quantity: PositiveFloat | None = None
+
+    class Config:
+        from_attributes = True

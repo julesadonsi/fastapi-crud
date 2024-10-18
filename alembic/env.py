@@ -5,8 +5,6 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from sqlmodel import SQLModel
-
 from src.models.base_model import Base
 from src.models.user_model import User
 from src.models.user_model import Item
