@@ -18,8 +18,11 @@ class User(Base):
 
     id: Mapped[int] = Column(Integer, primary_key=True, autoincrement=True)
     phone: Mapped[str] = Column(String, unique=True, index=True)
+    first_name: Mapped[str] = Column(String, nullable=True)
+    last_name: Mapped[str] = Column(String, nullable=True)
     email: Mapped[str] = Column(String, unique=True, index=True, nullable=True)
     password: Mapped[str] = Column(String)
+    avatar: Mapped[str] = Column(String, nullable=True)
     items: Mapped[List["Item"]] = relationship("Item", back_populates="user")
 
 

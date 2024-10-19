@@ -14,7 +14,11 @@ item_router = APIRouter()
 
 
 @item_router.get("/items", response_model=List[ItemSchema])
-async def get_items(skip: int = 0, limit: int = 10, db: AsyncSession = Depends(get_db)):
+async def get_items(
+    skip: int = 0,
+    limit: int = 10,
+    db: AsyncSession = Depends(get_db),
+):
     statement = select(Item).options(selectinload(Item.user)).offset(skip).limit(limit)
     result = await db.execute(statement)
     return result.scalars().all()

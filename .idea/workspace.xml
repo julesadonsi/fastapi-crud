@@ -5,34 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92216b1d-f682-4a69-86a9-edc08560f07c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/totalimmo-backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mypy.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utilis/transform.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/total-immobilier.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/versions/09a097d25328_relation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/versions/58fcf9ab912e_add_name_to_items_table.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/versions/855e11c779be_init.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alembic/versions/b80f80d6240b_relation.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/test_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mypy.ini" beforeDir="false" afterPath="$PROJECT_DIR$/mypy.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/auth_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/item_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/item_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/item_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/item_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schemas/user_shema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/user_shema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilis/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilis/transform.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +57,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_auth.test_signup_success.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -91,6 +76,29 @@
     ]
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Python tests for test_auth.test_signup_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="totalimmo-backend" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_auth.test_signup_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_auth.test_signup_success" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -110,11 +118,18 @@
       <workItem from="1729202359198" duration="4521000" />
       <workItem from="1729206906786" duration="406000" />
       <workItem from="1729207468602" duration="5790000" />
-      <workItem from="1729245940854" duration="12603000" />
+      <workItem from="1729245940854" duration="19232000" />
+      <workItem from="1729277336107" duration="3361000" />
+      <workItem from="1729280706993" duration="539000" />
+      <workItem from="1729328355585" duration="7260000" />
+      <workItem from="1729352206248" duration="9150000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/totalimmo_backend$.coverage" NAME=" Coverage Results" MODIFIED="1729267113716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/tests" />
   </component>
 </project>
