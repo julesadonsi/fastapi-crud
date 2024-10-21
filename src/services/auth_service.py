@@ -7,7 +7,6 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from jwt import InvalidTokenError
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.future import select
 
 from src.db import get_db
 from src.models.user_model import User
@@ -16,7 +15,6 @@ reuseable_oauth = OAuth2PasswordBearer(
     tokenUrl="/login",
     scheme_name="JWT",
 )
-from sqlalchemy.orm import Session
 
 
 def create_access_token(
@@ -36,9 +34,9 @@ def create_access_token(
     """
 
     if expires_delta:
-        expire = datetime.utcnow() + timedelta(expires_delta)
+        expire = datetime.now() + timedelta(expires_delta)
     else:
-        expire = datetime.utcnow() + timedelta(
+        expire = datetime.now() + timedelta(
             minutes=float(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES"))
         )
     to_encode = {
@@ -69,9 +67,9 @@ def create_refresh_token(
         str: JWT token
     """
     if expires_delta:
-        expire = datetime.utcnow() + timedelta(expires_delta)
+        expire = datetime.now() + timedelta(expires_delta)
     else:
-        expire = datetime.utcnow() + timedelta(
+        expire = datetime.now() + timedelta(
             minutes=float(os.environ.get("REFRESH_TOKEN_EXPIRE_MINUTES"))
         )
     to_encode = {

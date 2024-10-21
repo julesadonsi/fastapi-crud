@@ -34,12 +34,16 @@ async def update_user(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@user_router.patch("/{user_id}/avatar", response_model=UserSchema)
+@user_router.patch(
+    "/{user_id}/avatar",
+    response_model=UserSchema,
+)
 async def update_avatar(
     user_id: int,
     avatar: UploadFile = File(...),
     dependencies: tuple[AsyncSession, AsyncSession] = Depends(combine_dependencies),
 ):
+    """Update avatar"""
     database, user = dependencies
     wanted_user = await database.get(User, user_id)
 

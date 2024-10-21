@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92216b1d-f682-4a69-86a9-edc08560f07c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/test_auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mypy.ini" beforeDir="false" afterPath="$PROJECT_DIR$/mypy.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/auth_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/item_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/item_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/user_shema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/user_shema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilis/transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilis/transform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/auth_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/avatars/avatar_3.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +116,9 @@
       <workItem from="1729277336107" duration="3361000" />
       <workItem from="1729280706993" duration="539000" />
       <workItem from="1729328355585" duration="7260000" />
-      <workItem from="1729352206248" duration="9150000" />
+      <workItem from="1729352206248" duration="10086000" />
+      <workItem from="1729437316719" duration="2066000" />
+      <workItem from="1729495241761" duration="950000" />
     </task>
     <servers />
   </component>
